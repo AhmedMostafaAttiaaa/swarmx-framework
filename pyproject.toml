@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "swarm-x"
+version = "0.1.0"
+description = "Provider-agnostic multi-agent orchestration framework"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+yaml = ["PyYAML>=6"]
+gemini = ["google-genai>=1.0"]
+fastapi = ["fastapi>=0.100", "uvicorn>=0.23"]
+ui = ["streamlit>=1.30"]
+dev = ["pytest>=7", "pytest-asyncio>=0.21", "pytest-cov>=4"]
+
+[project.scripts]
+swarmx = "swarm_x.cli.main:main"
+
+[tool.setuptools.packages.find]
+include = ["swarm_x*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"

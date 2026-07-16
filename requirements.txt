@@ -1,0 +1,18 @@
+# Install Swarm-X itself in editable mode.
+-e .
+
+# Model/provider support.
+google-genai>=1.0
+
+# Configuration.
+PyYAML>=6
+
+# Optional API and browser UI.
+fastapi>=0.100
+uvicorn>=0.23
+streamlit>=1.30
+
+# Development and testing.
+pytest>=7
+pytest-asyncio>=0.21
+pytest-cov>=4

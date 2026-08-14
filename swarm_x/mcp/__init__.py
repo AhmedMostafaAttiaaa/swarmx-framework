@@ -1,2 +1,3 @@
 from .client import MCPClient, MCPToolAdapter
-__all__ = ["MCPClient", "MCPToolAdapter"]
+from .in_memory import InMemoryMCPClient
+__all__ = ["MCPClient", "MCPToolAdapter", "InMemoryMCPClient"]

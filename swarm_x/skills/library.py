@@ -8,3 +8,12 @@ summarizer_skill = Skill(
         "caller specifies a different length."
     ),
 )
+
+code_reviewer_skill = Skill(
+    name="code_reviewer",
+    instructions=(
+        "Review the given code for correctness, security, and clarity. Point out real "
+        "bugs, unsafe patterns, and missing edge-case handling; do not nitpick style. "
+        "For each issue, state the concrete failure scenario, not just a general concern."
+    ),
+)

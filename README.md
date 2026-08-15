@@ -43,9 +43,9 @@ Application / Streamlit / FastAPI / CLI
 - `models/` provides provider adapters through the common `BaseLLM` interface.
 - `orchestration/` executes agents using swarm routing, fixed workflows, or graph branches and joins.
 - `memory/` separates model-visible context from application-owned shared state and optional session history.
-- `tools/` contains injectable tools such as Serper search; `mcp/` adapts external MCP clients into tools.
+- `tools/` contains injectable tools such as Serper search, a sandboxed calculator, datetime, UUID, hash, and base64 utilities; `mcp/` adapts external MCP clients into tools, with `InMemoryMCPClient` for local testing and `StdioMCPClient` for spawning a real MCP server as a subprocess.
 - `events/`, `streaming/`, and `observability/` expose lifecycle events for UIs, logs, metrics, and tracing.
-- `skills/` provides reusable instruction bundles without coupling them to a particular model.
+- `skills/` provides reusable instruction bundles without coupling them to a particular model, including built-in `summarizer` and `code_reviewer` skills.
 - `config/` loads YAML and `.env` configuration while keeping secrets outside source control.
 
 ### Execution flow

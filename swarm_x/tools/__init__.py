@@ -1,4 +1,5 @@
 from .base import BaseTool, CalculatorTool
+from .base64_tool import Base64Tool
 from .datetime_tool import DateTimeTool
 from .hash_tool import HashTool
 from .registry import ToolRegistry
